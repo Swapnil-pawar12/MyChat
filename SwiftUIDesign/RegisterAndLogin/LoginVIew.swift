@@ -70,7 +70,11 @@ struct LoginVIew: View {
                         .padding(.bottom,30)
                         .frame(maxWidth: .infinity)
                 }
-              
+                if user.isLoaderOn == true{
+                    GeometryReader{_ in
+                        Loader()
+                    }.background(Color.black.opacity(0.45))
+                }
                     
             }.ignoresSafeArea(.all)
                 .frame(maxWidth: .infinity,alignment:.leading)

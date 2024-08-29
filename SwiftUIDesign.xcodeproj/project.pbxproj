@@ -48,7 +48,7 @@
 		04DD6BB02C2D3F7100C99A62 /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD6BAF2C2D3F7100C99A62 /* LottieAnimation.swift */; };
 		04DD6BB32C2D3FD700C99A62 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 04DD6BB22C2D3FD600C99A62 /* Animation.json */; };
 		04DD6BB52C2D50BE00C99A62 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD6BB42C2D50BE00C99A62 /* MessageView.swift */; };
-		04FD072E2C747C4B00F249C4 /* AlertVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD072D2C747C4B00F249C4 /* AlertVIew.swift */; };
+		04FD072E2C747C4B00F249C4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD072D2C747C4B00F249C4 /* Loader.swift */; };
 		A5CF083996BFA582F6D6CEF4 /* Pods_SwiftUIDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBD7B38B3DA0C6DC1667E28 /* Pods_SwiftUIDesign.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,7 +96,7 @@
 		04DD6BAF2C2D3F7100C99A62 /* LottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimation.swift; sourceTree = "<group>"; };
 		04DD6BB22C2D3FD600C99A62 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		04DD6BB42C2D50BE00C99A62 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		04FD072D2C747C4B00F249C4 /* AlertVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVIew.swift; sourceTree = "<group>"; };
+		04FD072D2C747C4B00F249C4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		1BBD7B38B3DA0C6DC1667E28 /* Pods_SwiftUIDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		612FDF98423C1E7067B99C0F /* Pods-SwiftUIDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIDesign.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIDesign/Pods-SwiftUIDesign.debug.xcconfig"; sourceTree = "<group>"; };
 		EAAD56F4EAA340AE0442A913 /* Pods-SwiftUIDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIDesign.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIDesign/Pods-SwiftUIDesign.release.xcconfig"; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 		04FD072C2C747C3700F249C4 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				04FD072D2C747C4B00F249C4 /* AlertVIew.swift */,
+				04FD072D2C747C4B00F249C4 /* Loader.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -454,7 +454,7 @@
 				04AF77482C1B0E6D00AB835B /* MucipalTabBarView.swift in Sources */,
 				04DD6BB02C2D3F7100C99A62 /* LottieAnimation.swift in Sources */,
 				0466FC502C181C4400BC4FA7 /* GlobalConstance.swift in Sources */,
-				04FD072E2C747C4B00F249C4 /* AlertVIew.swift in Sources */,
+				04FD072E2C747C4B00F249C4 /* Loader.swift in Sources */,
 				0468D2CE2C185C9200B35560 /* CustomeTableView.swift in Sources */,
 				04AF77462C1ADC2C00AB835B /* CustomCarouselView.swift in Sources */,
 			);

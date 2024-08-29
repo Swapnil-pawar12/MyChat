@@ -51,7 +51,15 @@ struct ChatHomeView: View {
                         .padding(.trailing,20)
                     }
                 }
-                
+                if user.chatUser == nil{
+                    GeometryReader{_ in
+                        Loader()
+                    }.background(Color.black.opacity(0.45))
+                }else if user.recentMessageLoaderOn{
+                    GeometryReader{_ in
+                        Loader()
+                    }.background(Color.black.opacity(0.45))
+                }
             }.ignoresSafeArea(.all)
         }.navigationBarHidden(true)
     }

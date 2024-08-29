@@ -30,6 +30,11 @@ struct AllUserShowView: View {
                 }
                 Spacer()
             }
+            if user.allUserLoaderOn{
+                GeometryReader{_ in
+                    Loader()
+                }.background(Color.black.opacity(0.45))
+            }
         }.ignoresSafeArea(.all)
         }.navigationBarHidden(true)
     }

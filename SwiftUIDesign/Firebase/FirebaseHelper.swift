@@ -13,6 +13,9 @@ class FirebaseHelper:ObservableObject{
     @Published var isLoggedIn: Bool = false
     @Published var loginError: String?
     @Published var recentMessagesArray = [RecentMessage]()
+    @Published var isLoaderOn = false
+    @Published var recentMessageLoaderOn = false
+    @Published var allUserLoaderOn = false
     init() {
         self.fetchCurrentUser()
         self.fetchAllUsers()
@@ -38,9 +41,11 @@ class FirebaseHelper:ObservableObject{
             }
     }
     func fetchCurrentUser(){
+        self.recentMessageLoaderOn.toggle()
         guard let uid =  FirebaseManeger.shared.auth.currentUser?.uid else{return}
         FirebaseManeger.shared.firebaseStorage.collection("users")
             .document(uid).getDocument { snapshot, err in
+                self.recentMessageLoaderOn.toggle()
                 if let err = err{
                     print("erro",err)
                     return
@@ -65,7 +70,9 @@ class FirebaseHelper:ObservableObject{
         }
     }
     func login(email: String, password: String) {
+        self.isLoaderOn.toggle()
         FirebaseManeger.shared.auth.signIn(withEmail: email, password: password) { authResult, error in
+            self.isLoaderOn.toggle()
             if let error = error {
                 print("Failed to log in: \(error.localizedDescription)")
                 return
@@ -77,8 +84,10 @@ class FirebaseHelper:ObservableObject{
         }
     }
     func fetchAllUsers() {
+        self.allUserLoaderOn.toggle()
         FirebaseManeger.shared.firebaseStorage.collection("users")
             .getDocuments { snapshot, error in
+                self.allUserLoaderOn.toggle()
                 if let error = error {
                     print("Failed to get users: \(error)")
                     return
